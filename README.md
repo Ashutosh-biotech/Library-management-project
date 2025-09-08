@@ -27,7 +27,7 @@ A full-stack web application for managing library books with user authentication
 ## Tech Stack
 
 **Backend:**
-- Java 17
+- Java 21
 - Spring Boot 3.2.0
 - Spring Security
 - Spring Data MongoDB
@@ -40,7 +40,7 @@ A full-stack web application for managing library books with user authentication
 - Vite
 - Redux Toolkit
 - Axios
-- CSS3 (Responsive Design)
+- Tailwindcss and Daisyui(for quick build)
 
 **Database:**
 - MongoDB
@@ -56,10 +56,7 @@ A full-stack web application for managing library books with user authentication
 
 ### Option 1: Docker (Recommended)
 ```bash
-# Run the entire application with Docker
-./run-docker.sh
-
-# Or manually with docker-compose
+# Run with docker-compose
 docker-compose up --build
 ```
 - Frontend: http://localhost:3000
@@ -71,7 +68,7 @@ docker-compose up --build
 #### 1. Database Setup
 ```bash
 # Start MongoDB service
-sudo systemctl start mongod
+<as per your system>
 # Or using Docker
 docker run -d -p 27017:27017 --name mongodb mongo:latest
 ```
@@ -112,9 +109,8 @@ Import the `Library_Management_API.postman_collection.json` file into Postman fo
 
 ## Default Users
 
-You can register new users or create default users:
+Admin User details for Admin Login in Library Management System:
 - Admin: username=`admin`, password=`password123`, role=`ADMIN`
-- Member: username=`member`, password=`password123`, role=`MEMBER`
 
 ## Project Structure
 
@@ -149,3 +145,4 @@ Library management/
 5. **State Management**: Redux for client-side state
 6. **Search Functionality**: Real-time book search
 7. **Role-based Access**: Admin and Member roles
+
